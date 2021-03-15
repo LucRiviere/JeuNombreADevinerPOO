@@ -1,14 +1,18 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre ‡ deviner
+// Nom du projet: Jeu du nombre √† deviner
 // Nom du fichier: MainJeuNombreAdeviner.cpp
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de crÈation : 05/02/2021
-// RÙle du fichier: Contient le code jeu
+// Date de cr√©ation : 05/02/2021
+// R√¥le du fichier: Contient le code jeu
 // Nom des composants utilises: CPartie
 //                              CJoueur
 //                              iostream
 // Historique du fichier:
+// cr√©ation d'un deuxi√®me joueur par Luc Rivi√®re le 15/03/2021
+// affichage des r√©sultats de chaque joueur sont affich√©s et le programme doit afficher lequel a gagn√© le plus de
+// parties ou s‚Äôils sont ex aequo Luc Rivi√®re le 15/03/2021
+// ajouter en plus le prenom du joueur par Luc Rivi√®re le 15/03/2021
 /*************************************************/
 #include <iostream>
 using namespace std;
@@ -17,7 +21,7 @@ using namespace std;
 
 int main()
 {
-    //CrÈation d'un joueur
+    //Cr√©ation d'un joueur
     cout << "Vous allez jouer pour deviner un nombre secret" << endl;
     cout << "----------------------------------------------"<< endl;
     string un_nom;
@@ -27,7 +31,7 @@ int main()
     cout << "Veuillez entrer votre nom" << endl;
     cin >> un_nom;
 
-    //CrÈation d'un joueur 2
+    //Cr√©ation d'un joueur 2
 
     string un_nom2;
     string un_prenom2;
@@ -37,7 +41,7 @@ int main()
     cin >> un_nom2;
 
 
-    // CrÈation des joueurs
+    // Cr√©ation des joueurs
     CJoueur joueur (un_prenom,un_nom);
     CJoueur joueur2 (un_prenom2,un_nom2);
 
@@ -56,11 +60,11 @@ int main()
         cout <<"Partie Numero : " << i+1 << endl;
         cout << "----------------------------------------------"<< endl;
 
-        CPartie partie (0,10,4);  // nombre ‡ deviner entre 0 et 10, nombre de tentatives maximum  pour joueur 1
-        CPartie partie2 (0,10,4); // nombre ‡ deviner entre 0 et 10, nombre de tentatives maximum 4 pour joueur 2
+        CPartie partie (0,10,4);  // nombre √† deviner entre 0 et 10, nombre de tentatives maximum  pour joueur 1
+        CPartie partie2 (0,10,4); // nombre √† deviner entre 0 et 10, nombre de tentatives maximum 4 pour joueur 2
 
         partie.Jouer(joueur,joueur);
-        partie2.Jouer(joueur2,joueur2); // exÈcution d'une partie pour le joueur
+        partie2.Jouer(joueur2,joueur2); // ex√©cution d'une partie pour le joueur
     }
 
 
@@ -68,13 +72,13 @@ int main()
     cout << "Affichage des resultats du joueur " << joueur.Prenom() << " " << joueur.Nom() << endl;
     cout << "----------------------------------------------"<< endl;
 
-    // RÈcupÈration des rÈsultats du joueur
+    // R√©cup√©ration des r√©sultats du joueur
     int nbsucces, nbechecs, nbessais;
     float nbEssaisMoy;
-    joueur.Resultats(nbsucces, nbechecs, nbessais);  // les paramËtres sont passÈs par rÈfÈrence
+    joueur.Resultats(nbsucces, nbechecs, nbessais);  // les param√®tres sont pass√©s par r√©f√©rence
     joueur.CalculerMoyEssais (nbEssaisMoy);
 
-    // Affichage des rÈsultats
+    // Affichage des r√©sultats
     cout << "Nombre de parties gagnees : " << nbsucces << endl;
     cout << "Nombre de parties perdues : " << nbechecs << endl;
     cout << "Nombre de tentatives totales : " << nbessais << endl;
@@ -88,10 +92,10 @@ int main()
 
     int nbsucces2, nbechecs2, nbessais2;
     float nbEssaisMoy2;
-    joueur2.Resultats(nbsucces2, nbechecs2, nbessais2);  // les paramËtres sont passÈs par rÈfÈrence
+    joueur2.Resultats(nbsucces2, nbechecs2, nbessais2);  // les param√®tres sont pass√©s par r√©f√©rence
     joueur2.CalculerMoyEssais(nbEssaisMoy2);
 
-    // Affichage des rÈsultats
+    // Affichage des r√©sultats
     cout << "Nombre de parties gagnees : " << nbsucces2 << endl;
     cout << "Nombre de parties perdues : " << nbechecs2 << endl;
     cout << "Nombre de tentatives totales : " << nbessais2 << endl;
@@ -116,4 +120,6 @@ int main()
         }
     return 0;
 }
+
+
 
