@@ -1,23 +1,25 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre ‡ deviner
+// Nom du projet: Jeu du nombre √† deviner
 // Nom du fichier: Joueur.cpp
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de crÈation : 05/02/2021
-// RÙle du fichier: Contient le code des mÈthodes du joueur
+// Date de cr√©ation : 05/02/2021
+// R√¥le du fichier: Contient le code des m√©thodes du joueur
 // Nom des composants utilises:
 // Historique du fichier:
+// cr√©ation de l'attribut du prenom du joueur  par Luc Rivi√®re le 15/03/2021
+// cr√©ation du destructeur  par Luc Rivi√®re le 15/03/2021
 /*************************************************/
 #include <iostream>
 using namespace std;
 #include "../include/Joueur.h"
 
     // Nom :CJoueur  Constructeur
-    // RÙle : Initialise toutes les informations du joueur.
-    //        Le nombre de tentatives, de parties gagnÈes et de parties jouÈes seront ‡ 0.
-    // ParamËtre d'entrÈe :
+    // R√¥le : Initialise toutes les informations du joueur.
+    //        Le nombre de tentatives, de parties gagn√©es et de parties jou√©es seront √† 0.
+    // Param√®tre d'entr√©e :
     //                  un_nom : le nom du joueur
-    // Sortie : le joueur crÈÈ
+    // Sortie : le joueur cr√©√©
 
     CJoueur::CJoueur(string un_prenom, string un_nom)
     {
@@ -29,9 +31,16 @@ using namespace std;
 
     }
 
+    // Nom :CJoueur Destructeur
+    // R√¥le : Afficher le nom du joueur qui va √™tre d√©truit ainsi que son adresse.
+    // Param√®tre d'entr√©e :
+    // Sortie : le nom du joueur qui sera d√©truit et son adresse
+
+
     CJoueur::~CJoueur()
 
     {
+
          cout << this->Prenom() << " " << this->Nom() << endl;
          cout << this << endl;
     }
@@ -39,12 +48,12 @@ using namespace std;
 
 
     // Nom : MajResultats
-    // RÙle : met ‡ jour les informations d'un joueur
-    // ParamËtres d'entrÈe:
+    // R√¥le : met √† jour les informations d'un joueur
+    // Param√®tres d'entr√©e:
     //              - le nombre d'essais
-    //              - gagne qui vaut true si le joueur a gagnÈ, false sinon
-    // EntrÈe/sortie :
-    //              le joueur dont on met ‡ jour les rÈsultats
+    //              - gagne qui vaut true si le joueur a gagn√©, false sinon
+    // Entr√©e/sortie :
+    //              le joueur dont on met √† jour les r√©sultats
 
 
     void CJoueur::MajResultats(int nbEssais, bool gagne)
@@ -58,15 +67,15 @@ using namespace std;
     }
 
     // Nom : Resultats
-    // RÙle : indique les rÈsultats d'un joueur
-    //        le nombre de parties gagnÈes, le nombre de parties perdues, le nombre d'essais total
-    //        La fonction N'affiche PAS les informations ‡ l'Ècran
-    // ParamËtres de sortie:
-    //                      - le nombre de succËs,
-    //                      - le nombre d'Èchecs
+    // R√¥le : indique les r√©sultats d'un joueur
+    //        le nombre de parties gagn√©es, le nombre de parties perdues, le nombre d'essais total
+    //        La fonction N'affiche PAS les informations √† l'√©cran
+    // Param√®tres de sortie:
+    //                      - le nombre de succ√®s,
+    //                      - le nombre d'√©checs
     //                      - le nombre total d'essais
-    // EntrÈe :
-    //            -le joueur dont on veut les rÈsultats
+    // Entr√©e :
+    //            -le joueur dont on veut les r√©sultats
 
     void CJoueur::Resultats(int& nbsucces, int& nbechec, int& nbessais)
     {
@@ -76,12 +85,10 @@ using namespace std;
         nbessais = this->nbTentatives;
     }
 
-    // Nom : MoyNbrEssais
-    // RÙle : indique la moyenne des essais pour un joueur
-    // ParamËtres de sortie:
-    //                      -le nombre moyen d'essais/partie
-    // EntrÈe :
-    //           -le nombre d'essais
+    // Nom : CalculerMoyEssais
+    // R√¥le : calcule la moyenne des essais pour un joueur
+    // Param√®tres d'entr√©e/sortie: nombre de tentatives par moyenne
+
 
     void CJoueur::CalculerMoyEssais(float &nbEssaisMoy)
 
@@ -92,10 +99,10 @@ using namespace std;
 
 
     // Nom :Nom
-    // RÙle : retourne le nom du joueur
-    // ParamËtres d'entrÈe: le joueur dont on veut le nom
+    // R√¥le : retourne le nom du joueur
+    // Param√®tres d'entr√©e: le joueur dont on veut le nom
     // Valeur de retour : nom du joueur
-    // EntrÈe : le joueur dont on veut le nom
+    // Entr√©e : le joueur dont on veut le nom
 
     string CJoueur::Prenom()
 
