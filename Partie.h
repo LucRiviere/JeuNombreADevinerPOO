@@ -1,10 +1,10 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre à deviner
+// Nom du projet: Jeu du nombre Ã  deviner
 // Nom du fichier: Partie.h
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de création : 05/02/2021
-// Rôle du fichier: Contient la déclaration de attributs et méthodes de la classe qui représente une partie
+// Date de crÃ©ation : 05/02/2021
+// RÃ´le du fichier: Contient la dÃ©claration de attributs et mÃ©thodes de la classe qui reprÃ©sente une partie
 // Nom des composants utilises: string, la classe CJoueur
 // Historique du fichier:
 /*************************************************/
@@ -17,31 +17,31 @@ class CPartie {
     public :
 
     // Nom :CPartie (constructeur)
-    // Rôle : initialise la partie avec le nombre d'essais max, les nombres minimal et maximal à trouver
-    // Paramètres d'entrée:
+    // RÃ´le : initialise la partie avec le nombre d'essais max, les nombres minimal et maximal Ã  trouver
+    // ParamÃ¨tres d'entrÃ©e:
     //              le nombre d'essais max,
     //              le nombre minimal,
     //              le nombre maximal
-    // Sortie : la partie qui est créée
+    // Sortie : la partie qui est crÃ©Ã©e
 
      CPartie ( int nbmin = 0, int nbmax = 10, int nbessaismax = 4);
 
 
 
     // Nom :Jouer
-    // Rôle : Tire un nombre aléatoire et démarre la partie
-    //        A la fin, met à jour les informations du joueur
-    // Parametre d'entrée/sortie : le joueur
-    // Entrée : la partie qui va se jouer
+    // RÃ´le : Tire un nombre alÃ©atoire et dÃ©marre la partie
+    //        A la fin, met Ã  jour les informations du joueur
+    // Parametre d'entrÃ©e/sortie : le joueur
+    // EntrÃ©e : la partie qui va se jouer
 
     void Jouer (CJoueur &joueur, CJoueur &nom);
 
     private :
 
         //Nom :TirerNombreMystere
-        // Rôle : Tire aléatoirement un nombre à deviner entre nbMin et nbMax
-        // Valeur de retour : nombre à deviner
-        // Entrée : la partie pour laquelle est tiré le nombre mystère
+        // RÃ´le : Tire alÃ©atoirement un nombre Ã  deviner entre nbMin et nbMax
+        // Valeur de retour : nombre Ã  deviner
+        // EntrÃ©e : la partie pour laquelle est tirÃ© le nombre mystÃ¨re
 
         int TirerNombreMystere();
 
@@ -49,11 +49,21 @@ class CPartie {
 
         int nbEssaisMax; // nombre d'essais max
 
-        int nbMin; // nombre minimal à trouver
-        int nbMax; // nombre maximal à trouver
+        int nbMin; // nombre minimal Ã  trouver
+        int nbMax; // nombre maximal Ã  trouver
 
 
 };
+
+
+
+
+
+
+
+
+
+
 
 
 
