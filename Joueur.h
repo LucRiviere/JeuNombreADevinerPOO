@@ -7,8 +7,8 @@
 // Rôle du fichier: Contient la déclaration des attributs et méthodes de la classe qui représente un joueur
 // Nom des composants utilises: string
 // Historique du fichier:
-// création de l'attribut prenom du joueur par Luc Rivière le 15/03/2021
-// déclaration de la méthode CalculerMoyEssais par Luc Rivière le 15/03/2021
+// création de l'attribut prenom du joueur et mettre les commentaires par Luc Rivière le 15/03/2021
+// déclaration de la méthode CalculerMoyEssais et mettre les commentaires par Luc Rivière le 15/03/2021
 /*************************************************/
 #include <string>
 using namespace std;
