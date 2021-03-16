@@ -7,8 +7,8 @@
 // Rôle du fichier: Contient le code des méthodes du joueur
 // Nom des composants utilises:
 // Historique du fichier:
-// création de l'attribut du prenom du joueur  par Luc Rivière le 15/03/2021
-// création du destructeur  par Luc Rivière le 15/03/2021
+// création de l'attribut du prenom du joueur et mettre les commentaires par Luc Rivière le 15/03/2021
+// création du destructeur et mettre les commentaires  par Luc Rivière le 15/03/2021
 /*************************************************/
 #include <iostream>
 using namespace std;
@@ -33,7 +33,6 @@ using namespace std;
 
     // Nom :CJoueur Destructeur
     // Rôle : Afficher le nom du joueur qui va être détruit ainsi que son adresse.
-    // Paramètre d'entrée :
     // Sortie : le nom du joueur qui sera détruit et son adresse
 
 
