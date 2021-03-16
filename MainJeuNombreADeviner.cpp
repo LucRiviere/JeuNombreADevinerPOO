@@ -63,8 +63,8 @@ int main()
         CPartie partie (0,10,4);  // nombre à deviner entre 0 et 10, nombre de tentatives maximum  pour joueur 1
         CPartie partie2 (0,10,4); // nombre à deviner entre 0 et 10, nombre de tentatives maximum 4 pour joueur 2
 
-        partie.Jouer(joueur,joueur);
-        partie2.Jouer(joueur2,joueur2); // exécution d'une partie pour le joueur
+        partie.Jouer(joueur,joueur); //exécution d'une partie pour le joueur1
+        partie2.Jouer(joueur2,joueur2); // exécution d'une partie pour le joueur2
     }
 
 
